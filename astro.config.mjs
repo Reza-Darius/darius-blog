@@ -10,5 +10,11 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()]
     },
-    integrations: [mdx(), sitemap()]
+    integrations: [mdx(), sitemap()],
+    markdown: {
+        shikiConfig: {
+            theme: 'one-dark-pro',
+            wrap: true
+        }
+    }
 });

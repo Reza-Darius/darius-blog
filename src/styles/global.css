@@ -86,3 +86,12 @@ nav a:hover {
     color: var(--accent);
     text-decoration-color: var(--accent);
 }
+
+.prose code {
+    color: #f25749;
+    font-family: var(--font-mono);
+}
+.prose code::before,
+.prose code::after {
+    content: none;
+}
