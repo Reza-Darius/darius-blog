@@ -1,0 +1,99 @@
+---
+import type { Hero as HeroProps } from '../types';
+import Button from './Button.astro';
+import CustomImage from './CustomImage.astro';
+
+type Props = HeroProps;
+
+const { title, image, actions } = Astro.props;
+---
+
+{
+    (title || image?.src) && (
+        <section class="hero-section mb-16 sm:mb-24">
+            <div class="hero-grid">
+                <div class="hero-text-block">
+                    {title && <h1 class="hero-title">{title}</h1>}
+                    {actions && actions.length > 0 && (
+                        <div class="hero-actions">
+                            {actions.map((action) => (
+                                <Button href={action.href}>{action.text}</Button>
+                            ))}
+                        </div>
+                    )}
+                </div>
+
+                {image?.src && (
+                    <div class="hero-image-block">
+                        <CustomImage
+                            class="hero-image"
+                            {...image}
+                            widths={[480, 640, 768, 1024]}
+                            sizes="(min-width: 832px) 55vw, 100vw"
+                            fetchpriority="high"
+                            loading="eager"
+                        />
+                    </div>
+                )}
+            </div>
+        </section>
+    )
+}
+
+<style>
+    .hero-grid {
+        display: grid;
+        /* ↓ adjust the two column widths to taste */
+        grid-template-columns: 2fr 3fr;
+        /* ↓ adjust the height of the hero to taste */
+        min-height: 520px;
+        gap: 3rem;
+    }
+
+    .hero-image-block {
+        overflow: hidden;
+        /* ↓ adjust how far the image bleeds vertically (relative to the grid height) */
+        height: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: grayscale(15%) contrast(1.05);
+        transition: filter 0.4s ease;
+    }
+
+    .hero-image:hover {
+        filter: grayscale(0%) contrast(1);
+    }
+
+    .hero-text-block {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hero-title {
+        font-family: var(--font-serif);
+        font-size: clamp(1rem, 3.1vw, 3.5rem);
+        font-weight: 500;
+        line-height: 1.05;
+        text-align: right;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: right;
+    }
+
+    @media (max-width: 640px) {
+        .hero-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
+</style>
