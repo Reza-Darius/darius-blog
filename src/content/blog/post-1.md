@@ -25,6 +25,7 @@ In recent years, the way we work has undergone a significant transformation, lar
 ```rust
 fn main() {
     let x = foo();
+    let y = bar();
 }
 ```
 
