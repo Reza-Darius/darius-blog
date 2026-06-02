@@ -260,7 +260,8 @@ where
 }
 ```
 
-Notice how much boilerplate we had to go through for, what is essentially, one line of business logic, which is why i put together a tower_templates repo.
+Notice how much boilerplate we had to go through for, what is essentially, one line of business logic?
+It pays having these templates ready and adjust the parts as needed.
 
 Join me for Part 2 where we look at how to roll your own futures to avoid allocations.
 
