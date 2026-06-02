@@ -1,5 +1,5 @@
 import avatar from '../assets/images/avatar.jpg';
-import hero from '../assets/images/hero.jpg';
+import hero from '../assets/images/hero_cropped.jpg';
 import type { SiteConfig } from '../types';
 
 const siteConfig: SiteConfig = {
@@ -9,21 +9,21 @@ const siteConfig: SiteConfig = {
         alt: 'Ethan Donovan'
     },
     title: 'darius_dev',
-    subtitle: 'Minimal Astro.js theme',
+    subtitle: 'art enjoyer and programmer',
     description: 'Astro.js and Tailwind CSS theme for blog and portfolio by justgoodui.com',
     image: {
         src: '/dante-preview.jpg',
         alt: 'Dante - Astro.js and Tailwind CSS theme'
     },
     headerNavLinks: [
-        {
-            text: '/about',
-            href: '/about'
-        },
-        {
-            text: '/projects',
-            href: '/projects'
-        },
+        // {
+        //     text: '/about',
+        //     href: '/about'
+        // },
+        // {
+        //     text: '/projects',
+        //     href: '/projects'
+        // },
         {
             text: '/blog',
             href: '/blog'
@@ -46,11 +46,11 @@ const siteConfig: SiteConfig = {
     socialLinks: [
         {
             text: 'GitHub',
-            href: 'https://dribbble.com/'
+            href: 'https://github.com/Reza-Darius'
         },
         {
             text: 'Instagram',
-            href: 'https://instagram.com/'
+            href: 'https://instagram.com/reza_darius'
         }
     ],
     hero: {

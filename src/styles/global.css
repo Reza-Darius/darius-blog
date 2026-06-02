@@ -26,7 +26,7 @@ html.dark {
     --bg-main: #18181b;
     --bg-muted: #18181b;
     --border-main: #fefefd;
-    --accent: #f25749;
+    --accent: #FF6152;
 }
 
 @theme inline {
@@ -88,7 +88,7 @@ nav a:hover {
 }
 
 .prose code {
-    color: #f25749;
+    color: var(--accent);
     font-family: var(--font-mono);
 }
 .prose code::before,

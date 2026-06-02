@@ -1,5 +1,5 @@
 ---
-title: Rust Tower survival guide, or how i stopped worrying and learned to love generics.
+title: Building HTTP services with Tower; or how i stopped worrying and learned to love generics.
 excerpt: Guide for building HTTP services with Tower and Hyper.
 publishDate: 'May 29 2026'
 isFeatured: true
@@ -151,8 +151,8 @@ Consider the following signature of a different service:
 
 ```rust
 impl Service<String> for HelloService {
-    Response = String
-    // ..
+    type Response = String
+    // ...
 }
 ```
 
@@ -262,8 +262,5 @@ where
 
 Notice how much boilerplate we had to go through for, what is essentially, one line of business logic, which is why i put together a tower_templates repo.
 
-## Getting your Types right
+Join me for Part 2 where we look at how to roll your own futures to avoid allocations.
 
-- unifying your types
-- writing futures
-- dealing with HTTP bodies

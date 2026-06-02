@@ -25,6 +25,6 @@ const blog = page.data;
         <a href="/tags" class="font-serif text-2xl italic">tags</a>
     </div>
     {blog.map((post) => <PostPreview post={post} class="mb-10 sm:mb-12" />)}
-    <Pagination page={page} class="my-16 sm:my-24" />
+    <Pagination page={page} class="my-16 sm:my-24 font-mono" />
     <Subscribe class="my-16 sm:my-24" />
 </BaseLayout>

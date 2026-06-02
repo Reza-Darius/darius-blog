@@ -61,13 +61,9 @@ const { title, image, actions } = Astro.props;
         height: 100%;
         object-fit: cover;
         display: block;
-        filter: grayscale(15%) contrast(1.05);
         transition: filter 0.4s ease;
     }
 
-    .hero-image:hover {
-        filter: grayscale(0%) contrast(1);
-    }
 
     .hero-text-block {
         display: flex;
