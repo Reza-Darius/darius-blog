@@ -3,14 +3,14 @@ import hero from '../assets/images/hero_cropped.jpg';
 import type { SiteConfig } from '../types';
 
 const siteConfig: SiteConfig = {
-    website: 'https://darius.dev',
+    website: 'https://reza-darius.pages.dev',
     avatar: {
         src: avatar,
         alt: 'Ethan Donovan'
     },
     title: 'darius_dev',
     subtitle: 'art enjoyer and programmer',
-    description: 'Astro.js and Tailwind CSS theme for blog and portfolio by justgoodui.com',
+    description: 'Technical blog posts and other musings',
     image: {
         src: '/dante-preview.jpg',
         alt: 'Dante - Astro.js and Tailwind CSS theme'
